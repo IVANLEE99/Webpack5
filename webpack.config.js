@@ -9,10 +9,16 @@ module.exports = {
   },
   //加载器
   module: {
-    rules: [],
+    rules: [
+      {
+        test: /\.css$/,
+        //use 数组里面的loader 执行顺序是从右到左，从后面往前面执行
+        use: ["style-loader", "css-loader"],
+      },
+    ],
   },
   //插件
   plugins: [],
   //模式
-  mode: "production", // configuration.mode should be one of these:"development" | "production" | "none"
+  mode: "development", // configuration.mode should be one of these:"development" | "production" | "none"
 };
