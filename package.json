@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/IVANLEE99/Webpack5/issues"
   },
-  "homepage": "https://github.com/IVANLEE99/Webpack5#readme"
+  "homepage": "https://github.com/IVANLEE99/Webpack5#readme",
+  "devDependencies": {
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
+  }
 }
