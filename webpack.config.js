@@ -24,6 +24,10 @@ module.exports = {
           "less-loader",
         ],
       },
+      {
+        test: /\.s[ac]ss$/,
+        use: ["style-loader", "css-loader", "sass-loader"],
+      },
     ],
   },
   //插件
