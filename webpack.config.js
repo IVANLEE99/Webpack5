@@ -4,8 +4,9 @@ module.exports = {
   entry: "./src/main.js",
   //输出
   output: {
+    //所有文件的目录
     path: path.resolve(__dirname, "./dist"),
-    filename: "main.js",
+    filename: "static/js/main.js", //将js文件输出到static/js 目录中
   },
   //加载器
   module: {
@@ -39,6 +40,14 @@ module.exports = {
           dataUrlCondition: {
             maxSize: 150 * 1024,
           },
+        },
+        generator: {
+          // 将图片文件输出到 static/imgs 目录中
+          // 将图片文件命名 [hash:8][ext][query]
+          // [hash:8]: hash值取8位
+          // [ext]: 使用之前的文件扩展名
+          // [query]: 添加之前的query参数
+          filename: "static/imgs/[hash:8][ext][query]",
         },
         // parser: {
         //   dataUrlCondition: {
