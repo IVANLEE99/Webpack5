@@ -32,6 +32,20 @@ module.exports = {
         test: /\.styl$/,
         use: ["style-loader", "css-loader", "stylus-loader"],
       },
+      {
+        test: /\.(png|jpe?g|gif|webp|svg)/,
+        type: "asset",
+        parser: {
+          dataUrlCondition: {
+            maxSize: 150 * 1024,
+          },
+        },
+        // parser: {
+        //   dataUrlCondition: {
+        //     maxSize: 150 * 1024, // 4kb
+        //   },
+        // },
+      },
     ],
   },
   //插件
