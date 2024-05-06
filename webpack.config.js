@@ -15,6 +15,15 @@ module.exports = {
         //use 数组里面的loader 执行顺序是从右到左，从后面往前面执行
         use: ["style-loader", "css-loader"],
       },
+      {
+        test: /\.less$/i,
+        use: [
+          // compiles Less to CSS
+          "style-loader",
+          "css-loader",
+          "less-loader",
+        ],
+      },
     ],
   },
   //插件
