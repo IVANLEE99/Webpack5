@@ -90,9 +90,11 @@ module.exports = {
             include: path.resolve(__dirname, "../src"), // 也可以用包含
             use: {
               loader: "babel-loader",
-              //   options: {
-              //     presets: ["@babel/preset-env"],
-              //   },
+              options: {
+                // presets: ["@babel/preset-env"],
+                cacheDirectory: true, // 开启babel编译缓存
+                cacheCompression: false, // 缓存文件不要压缩
+              },
             },
           },
         ],
@@ -105,6 +107,12 @@ module.exports = {
       // 指定文件根目录，类型为字符串。
       context: path.resolve(__dirname, "../src"),
       exclude: "node_modules", // 默认值
+      cache: true, // 开启缓存
+      // 缓存目录
+      cacheLocation: path.resolve(
+        __dirname,
+        "../node_modules/.cache/.eslintcache"
+      ),
     }),
     new HtmlWebpackPlugin({
       // 以 public/index.html 为模板创建文件
