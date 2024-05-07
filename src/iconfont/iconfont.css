@@ -1,0 +1,1483 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 2467342 */
+  src: url('iconfont.woff2?t=1715048331334') format('woff2'),
+       url('iconfont.woff?t=1715048331334') format('woff'),
+       url('iconfont.ttf?t=1715048331334') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.iconTranslate:before {
+  content: "\e830";
+}
+
+.iconqv_icon:before {
+  content: "\e82f";
+}
+
+.icona-item_viewsvg:before {
+  content: "\e82d";
+}
+
+.iconitem_free_swatch:before {
+  content: "\e82e";
+}
+
+.iconxiankuang:before {
+  content: "\e82c";
+}
+
+.iconsecurity:before {
+  content: "\e825";
+}
+
+.iconempert:before {
+  content: "\e826";
+}
+
+.iconsecure:before {
+  content: "\e827";
+}
+
+.iconpayment1:before {
+  content: "\e828";
+}
+
+.iconsupport:before {
+  content: "\e829";
+}
+
+.iconpayment_loading:before {
+  content: "\e82a";
+}
+
+.iconcard:before {
+  content: "\e82b";
+}
+
+.icona-30_day_returns:before {
+  content: "\e821";
+}
+
+.iconfree_shipping2:before {
+  content: "\e822";
+}
+
+.iconsecure_checkout:before {
+  content: "\e823";
+}
+
+.icondelivery_guarantee:before {
+  content: "\e824";
+}
+
+.icondamage_compensation:before {
+  content: "\e81f";
+}
+
+.iconlate_delivery_compensation:before {
+  content: "\e820";
+}
+
+.icondetails_secureprivacy:before {
+  content: "\e81d";
+}
+
+.icondetails_deliveryguarantee:before {
+  content: "\e81e";
+}
+
+.icondetails_30dayreturn:before {
+  content: "\e819";
+}
+
+.icondetails_expertcustomerservice:before {
+  content: "\e81a";
+}
+
+.icondetails_freeshipping:before {
+  content: "\e81b";
+}
+
+.icondetails_safepaymentoptions:before {
+  content: "\e81c";
+}
+
+.iconpick_up:before {
+  content: "\e817";
+}
+
+.iconpop_store:before {
+  content: "\e815";
+}
+
+.iconpop_loction:before {
+  content: "\e816";
+}
+
+.iconlego_coupon:before {
+  content: "\e814";
+}
+
+.iconhome_default:before {
+  content: "\e812";
+}
+
+.iconhome_selected:before {
+  content: "\e813";
+}
+
+.iconld_more:before {
+  content: "\e808";
+}
+
+.icontips_countdown:before {
+  content: "\e807";
+}
+
+.iconhome_support:before {
+  content: "\e804";
+}
+
+.iconsupport_live:before {
+  content: "\e80f";
+}
+
+.iconsupport_emali:before {
+  content: "\e810";
+}
+
+.iconsupport_callus:before {
+  content: "\e811";
+}
+
+.iconsupport_cancelorder1:before {
+  content: "\e801";
+}
+
+.iconsupport_selfservicetool_trackorder1:before {
+  content: "\e809";
+}
+
+.iconsupport_returns1:before {
+  content: "\e80a";
+}
+
+.iconsupport_coupon1:before {
+  content: "\e80b";
+}
+
+.iconsupport_account1:before {
+  content: "\e80c";
+}
+
+.iconhome_chat1:before {
+  content: "\e80d";
+}
+
+.iconsupport_address1:before {
+  content: "\e80e";
+}
+
+.icontop:before {
+  content: "\e7fb";
+}
+
+.iconcontactus:before {
+  content: "\e7f9";
+}
+
+.iconorder_time:before {
+  content: "\e7f8";
+}
+
+.iconorder_pdf:before {
+  content: "\e7f4";
+}
+
+.iconorder_empty:before {
+  content: "\e7f5";
+}
+
+.iconorder_back:before {
+  content: "\e7f6";
+}
+
+.iconorder_copy:before {
+  content: "\e7f7";
+}
+
+.iconall:before {
+  content: "\e7ef";
+}
+
+.iconfree_sp:before {
+  content: "\e7e8";
+}
+
+.iconhome_nav_order:before {
+  content: "\e7e9";
+}
+
+.icondownload_app:before {
+  content: "\e7ea";
+}
+
+.iconoff:before {
+  content: "\e7e7";
+}
+
+.iconpoint_cart:before {
+  content: "\e7e4";
+}
+
+.iconpoint_account:before {
+  content: "\e7e5";
+}
+
+.iconpoint_browse:before {
+  content: "\e7e6";
+}
+
+.icona-1:before {
+  content: "\e7e3";
+}
+
+.iconexchange_diasount_icon:before {
+  content: "\e7e1";
+}
+
+.iconpayment_down1:before {
+  content: "\e7de";
+}
+
+.iconpayment_coupon:before {
+  content: "\e7df";
+}
+
+.iconpayment_points:before {
+  content: "\e7e0";
+}
+
+.iconcoupon_selected:before {
+  content: "\e7dc";
+}
+
+.iconcoupon_default:before {
+  content: "\e7dd";
+}
+
+.icontracking_details_exception:before {
+  content: "\e7d9";
+}
+
+.icontracking_details_contact:before {
+  content: "\e7da";
+}
+
+.icontracking_details_shipping:before {
+  content: "\e7db";
+}
+
+.iconlegao_shipin_fangda:before {
+  content: "\e7d8";
+}
+
+.iconcheck:before {
+  content: "\e609";
+}
+
+.iconget_nu_coupon:before {
+  content: "\e7d7";
+}
+
+.icondelete:before {
+  content: "\e7d6";
+}
+
+.icona-home_nav_points:before {
+  content: "\e7d5";
+}
+
+.iconsidebar_pop_room:before {
+  content: "\e7d1";
+}
+
+.iconsidebar_pop_sales:before {
+  content: "\e7d2";
+}
+
+.iconsidebar_pop_cart:before {
+  content: "\e7d3";
+}
+
+.iconsidebar_pop_signin:before {
+  content: "\e7d4";
+}
+
+.iconget_app:before {
+  content: "\e7d0";
+}
+
+.iconmove:before {
+  content: "\e7c0";
+}
+
+.iconfilter:before {
+  content: "\e7c1";
+}
+
+.iconrename:before {
+  content: "\e7c2";
+}
+
+.iconremove:before {
+  content: "\e7c5";
+}
+
+.iconshare:before {
+  content: "\e7c6";
+}
+
+.iconlinks:before {
+  content: "\e7c7";
+}
+
+.iconsetting:before {
+  content: "\e7c8";
+}
+
+.iconarrow_s_w:before {
+  content: "\e7c9";
+}
+
+.iconsidebar_app:before {
+  content: "\e7b9";
+}
+
+.iconsidebar_history:before {
+  content: "\e7ba";
+}
+
+.iconsidebar_collect:before {
+  content: "\e7bb";
+}
+
+.iconsidebar_cart:before {
+  content: "\e7bc";
+}
+
+.iconsidebar_tcustomer:before {
+  content: "\e7bd";
+}
+
+.iconsidebar_top:before {
+  content: "\e7be";
+}
+
+.iconcode_pcsvg:before {
+  content: "\e7b8";
+}
+
+.iconaftesale_not_article:before {
+  content: "\e7b3";
+}
+
+.iconaftesale_not_available:before {
+  content: "\e7b4";
+}
+
+.iconall_order_select:before {
+  content: "\e7b2";
+}
+
+.iconaftersale_finish:before {
+  content: "\e7af";
+}
+
+.iconsingle_order_select:before {
+  content: "\e7ae";
+}
+
+.icondetails_chatbeifen:before {
+  content: "\e7ac";
+}
+
+.iconhome_sidebar_icon_contact:before {
+  content: "\e7ab";
+}
+
+.iconhome_sidebar_icon_help:before {
+  content: "\e7aa";
+}
+
+.iconcart_serve_customer_icon:before {
+  content: "\e79e";
+}
+
+.iconcart_serve_payment_icon:before {
+  content: "\e7a0";
+}
+
+.iconcart_serve_secure_icon:before {
+  content: "\e7a2";
+}
+
+.iconcart_serve_customer_suspended:before {
+  content: "\e7a4";
+}
+
+.iconcart_serve_return_icon:before {
+  content: "\e7a5";
+}
+
+.iconcart_correct_icon:before {
+  content: "\e79a";
+}
+
+.iconcart_summary_down_icon:before {
+  content: "\e79b";
+}
+
+.iconcart_title_freeshippin_icon:before {
+  content: "\e79d";
+}
+
+.iconcart_title_pickup_icon:before {
+  content: "\e79f";
+}
+
+.iconcart_null_icon:before {
+  content: "\e7a1";
+}
+
+.iconcart_loading_icon:before {
+  content: "\e7a3";
+}
+
+.iconvideo_play:before {
+  content: "\e799";
+}
+
+.iconcoupon:before {
+  content: "\e797";
+}
+
+.icontop_selling:before {
+  content: "\e798";
+}
+
+.iconcheckout_address_search:before {
+  content: "\e795";
+}
+
+.iconcheckout_address_correct:before {
+  content: "\e78f";
+}
+
+.iconcheckout_address_down:before {
+  content: "\e790";
+}
+
+.iconcheckout_upon:before {
+  content: "\e78e";
+}
+
+.iconcart_coupon_pop_defaul:before {
+  content: "\e78a";
+}
+
+.iconcart_coupon_pop_checked:before {
+  content: "\e78b";
+}
+
+.iconins_upon_pop_delete:before {
+  content: "\e786";
+}
+
+.iconins_photo_add:before {
+  content: "\e785";
+}
+
+.iconins_photo_idea_more:before {
+  content: "\e77d";
+}
+
+.iconins_carousel_toggle_left:before {
+  content: "\e77e";
+}
+
+.iconins_photo_info_error:before {
+  content: "\e77f";
+}
+
+.iconins_pop_delete_icon:before {
+  content: "\e780";
+}
+
+.iconins_photo_upload:before {
+  content: "\e782";
+}
+
+.iconreview_like_icon_default:before {
+  content: "\e783";
+}
+
+.iconreview_like_icon_check:before {
+  content: "\e784";
+}
+
+.iconreview_yopto:before {
+  content: "\e779";
+}
+
+.iconins_review_icon:before {
+  content: "\e776";
+}
+
+.iconpayment_pop_failed:before {
+  content: "\e772";
+}
+
+.iconcart_coupon_default:before {
+  content: "\e76d";
+}
+
+.iconcoupons_more:before {
+  content: "\e76b";
+}
+
+.iconlable3:before {
+  content: "\e76a";
+}
+
+.iconcoupon_list_copy:before {
+  content: "\e766";
+}
+
+.icona-3d2:before {
+  content: "\e765";
+}
+
+.iconlogin_forgot_back:before {
+  content: "\e764";
+}
+
+.iconlogin_loading:before {
+  content: "\e763";
+}
+
+.iconlogin_coupon:before {
+  content: "\e762";
+}
+
+.iconerweima:before {
+  content: "\e761";
+}
+
+.iconfushimian:before {
+  content: "\e760";
+}
+
+.iconcemian:before {
+  content: "\e75c";
+}
+
+.icona-3Dmian:before {
+  content: "\e75d";
+}
+
+.icona-45dumian:before {
+  content: "\e75e";
+}
+
+.iconzhengmian:before {
+  content: "\e75f";
+}
+
+.iconar:before {
+  content: "\e75a";
+}
+
+.icona-360:before {
+  content: "\e759";
+}
+
+.icona-details_service_whitegove:before {
+  content: "\e758";
+}
+
+.iconcoupon_packets:before {
+  content: "\e752";
+}
+
+.iconfree_shipping1:before {
+  content: "\e753";
+}
+
+.icona-30_day_return:before {
+  content: "\e754";
+}
+
+.iconcustomer_serve:before {
+  content: "\e755";
+}
+
+.icona-30-DayReturn:before {
+  content: "\e751";
+}
+
+.icona-FreeShipping:before {
+  content: "\e74d";
+}
+
+.icona-DamageCompensation:before {
+  content: "\e74f";
+}
+
+.icona-LateDeliveryCompensation:before {
+  content: "\e750";
+}
+
+.iconwishlist_cart1:before {
+  content: "\e74e";
+}
+
+.iconlist_wishlist_default:before {
+  content: "\e74b";
+}
+
+.iconlist_wishlist_selected:before {
+  content: "\e74c";
+}
+
+.iconranking:before {
+  content: "\e749";
+}
+
+.iconposition:before {
+  content: "\e747";
+}
+
+.iconhelp_default:before {
+  content: "\e744";
+}
+
+.iconhelp_down:before {
+  content: "\e745";
+}
+
+.iconhelp_serach:before {
+  content: "\e746";
+}
+
+.iconcoupon_rules:before {
+  content: "\e741";
+}
+
+.iconcoupon_down:before {
+  content: "\e73f";
+}
+
+.icontoast_coupon_success:before {
+  content: "\e73d";
+}
+
+.iconhome_sidebar_delete_icon:before {
+  content: "\e73c";
+}
+
+.icondetail_transport_icon_select:before {
+  content: "\e73a";
+}
+
+.icondetail_location:before {
+  content: "\e73b";
+}
+
+.iconwarehouse_icon:before {
+  content: "\e737";
+}
+
+.icondetail_transport_pickup_no:before {
+  content: "\e738";
+}
+
+.icondetail_transprt_icon_home:before {
+  content: "\e739";
+}
+
+.iconshoucang:before {
+  content: "\e732";
+}
+
+.iconphone:before {
+  content: "\e731";
+}
+
+.icona-shopthelook:before {
+  content: "\e730";
+}
+
+.icona-order_details_close:before {
+  content: "\e72d";
+}
+
+.iconreview_avatar_verified_buyer:before {
+  content: "\e72a";
+}
+
+.iconreview_avatar_verified_reviewer:before {
+  content: "\e72b";
+}
+
+.iconlabel2:before {
+  content: "\e729";
+}
+
+.iconwindows_notice:before {
+  content: "\e728";
+}
+
+.iconreview_unhelpful_default:before {
+  content: "\e727";
+}
+
+.icona-review_store_owner:before {
+  content: "\e726";
+}
+
+.iconreview_helpful_default:before {
+  content: "\e725";
+}
+
+.iconreview_share:before {
+  content: "\e724";
+}
+
+.iconreview_facebook:before {
+  content: "\e721";
+}
+
+.iconreview_Linkedln:before {
+  content: "\e722";
+}
+
+.iconreview_twitter:before {
+  content: "\e723";
+}
+
+.iconpop_review_success:before {
+  content: "\e720";
+}
+
+.iconreview_down:before {
+  content: "\e71f";
+}
+
+.icontiktok_h:before {
+  content: "\e71b";
+}
+
+.icontiktok_d:before {
+  content: "\e71c";
+}
+
+.iconmail_service_damage:before {
+  content: "\e715";
+}
+
+.iconmail_service_freeshipping:before {
+  content: "\e718";
+}
+
+.iconmail_service_returns:before {
+  content: "\e719";
+}
+
+.iconmail_service_service:before {
+  content: "\e71a";
+}
+
+.iconupload:before {
+  content: "\e716";
+}
+
+.iconapplication:before {
+  content: "\e717";
+}
+
+.iconme_product_switch:before {
+  content: "\e714";
+}
+
+.iconprocess_complete:before {
+  content: "\e70e";
+}
+
+.iconprocess_peding:before {
+  content: "\e70f";
+}
+
+.iconprocess_shipped:before {
+  content: "\e710";
+}
+
+.iconprocess_cancel:before {
+  content: "\e711";
+}
+
+.iconprocess_payment:before {
+  content: "\e712";
+}
+
+.iconprocess_processing:before {
+  content: "\e713";
+}
+
+.icona-customerservice:before {
+  content: "\e70c";
+}
+
+.iconPrint:before {
+  content: "\e70d";
+}
+
+.iconme_cancel_selected:before {
+  content: "\e70b";
+}
+
+.iconme_payment_selected:before {
+  content: "\e701";
+}
+
+.iconme_pending_selected:before {
+  content: "\e702";
+}
+
+.iconme_processing_selected:before {
+  content: "\e703";
+}
+
+.iconme_shipped_default:before {
+  content: "\e704";
+}
+
+.iconme_payment_default:before {
+  content: "\e705";
+}
+
+.iconme_processing_default:before {
+  content: "\e706";
+}
+
+.iconme_pending_default:before {
+  content: "\e707";
+}
+
+.iconme_shipped_selected:before {
+  content: "\e708";
+}
+
+.iconme_completeme_default:before {
+  content: "\e709";
+}
+
+.iconme_completeme_selected:before {
+  content: "\e70a";
+}
+
+.iconbiaoqian:before {
+  content: "\e6ff";
+}
+
+.iconsearch_delete:before {
+  content: "\e6f9";
+}
+
+.icondetails_search:before {
+  content: "\e6f8";
+}
+
+.icondetails_helpful_default-copy:before {
+  content: "\e7c4";
+}
+
+.icondetails_seemore_down:before {
+  content: "\e6ee";
+}
+
+.icondetails_helpful_default:before {
+  content: "\e6ef";
+}
+
+.iconwhatsapp-fill:before {
+  content: "\e7c3";
+}
+
+.iconcart_tabbar_details:before {
+  content: "\e6e9";
+}
+
+.icondetails_email:before {
+  content: "\e6e8";
+}
+
+.icondetails_facebook:before {
+  content: "\e6e5";
+}
+
+.icondetails_pinterest:before {
+  content: "\e6e6";
+}
+
+.icondetails_twitter:before {
+  content: "\e6e7";
+}
+
+.iconpdf:before {
+  content: "\e639";
+}
+
+.icondetails_collect:before {
+  content: "\e6e3";
+}
+
+.icondetails_not_collect:before {
+  content: "\e6e4";
+}
+
+.iconactivity_right:before {
+  content: "\e6df";
+}
+
+.iconcart_login:before {
+  content: "\e6de";
+}
+
+.iconpayment_code_correct:before {
+  content: "\e6da";
+}
+
+.iconpayment_down:before {
+  content: "\e6db";
+}
+
+.iconnew_user_code_correct:before {
+  content: "\e6dc";
+}
+
+.iconpayment_back:before {
+  content: "\e6dd";
+}
+
+.iconpayment_cart:before {
+  content: "\e6cf";
+}
+
+.icontime:before {
+  content: "\e6cd";
+}
+
+.iconnew_view_more_icon:before {
+  content: "\e6cc";
+}
+
+.iconme_coupons:before {
+  content: "\e6c9";
+}
+
+.iconfast_dispatch:before {
+  content: "\e6c8";
+}
+
+.iconpc_servive_icon:before {
+  content: "\e6c5";
+}
+
+.iconnew_unavailable_icon:before {
+  content: "\e6c3";
+}
+
+.icona-pc_freeshipping_icon:before {
+  content: "\e6c4";
+}
+
+.icona-pc_nohasslereturns_icon:before {
+  content: "\e6c6";
+}
+
+.iconnew_label_received:before {
+  content: "\e6c2";
+}
+
+.icondispatch:before {
+  content: "\e6b9";
+}
+
+.icon48hours:before {
+  content: "\e6b2";
+}
+
+.iconclear_x:before {
+  content: "\e6ad";
+}
+
+.iconpopular:before {
+  content: "\e6aa";
+}
+
+.iconhot:before {
+  content: "\e6ab";
+}
+
+.iconrecent:before {
+  content: "\e6ac";
+}
+
+.iconpayment_credit_problem_icon:before {
+  content: "\e6a9";
+}
+
+.iconpayment_credit_safety_icon:before {
+  content: "\e6a7";
+}
+
+.iconshandian:before {
+  content: "\e6a5";
+}
+
+.iconpayment_add_icon:before {
+  content: "\e69f";
+}
+
+.iconpayment_delete_icon:before {
+  content: "\e6a0";
+}
+
+.iconpayment_down_icon:before {
+  content: "\e6a1";
+}
+
+.iconpayment_success_icon:before {
+  content: "\e6a2";
+}
+
+.iconpayment_edit_icon:before {
+  content: "\e6a3";
+}
+
+.iconpayment_safty_icon:before {
+  content: "\e6a4";
+}
+
+.iconPopup_delete:before {
+  content: "\e696";
+}
+
+.iconfree_shipping:before {
+  content: "\e694";
+}
+
+.iconcart_default:before {
+  content: "\e692";
+}
+
+.iconcart_selected:before {
+  content: "\e693";
+}
+
+.iconcart_qty_less:before {
+  content: "\e690";
+}
+
+.iconcart_qty_plus:before {
+  content: "\e691";
+}
+
+.iconcart_continue_shipping:before {
+  content: "\e68f";
+}
+
+.iconcart_wishlist:before {
+  content: "\e68e";
+}
+
+.icondetails_left:before {
+  content: "\e687";
+}
+
+.iconpopups_copy:before {
+  content: "\e67c";
+}
+
+.iconcoupons_default:before {
+  content: "\e66c";
+}
+
+.iconcoupons_choice:before {
+  content: "\e66d";
+}
+
+.iconcoupons_not:before {
+  content: "\e66e";
+}
+
+.iconsort_up1:before {
+  content: "\e668";
+}
+
+.icon1:before {
+  content: "\e665";
+}
+
+.icon2:before {
+  content: "\e666";
+}
+
+.icon3:before {
+  content: "\e667";
+}
+
+.iconsort_delete:before {
+  content: "\e65d";
+}
+
+.iconsort_default:before {
+  content: "\e65e";
+}
+
+.iconsort_right_selected:before {
+  content: "\e65f";
+}
+
+.iconsort_down:before {
+  content: "\e660";
+}
+
+.iconsort_left_default:before {
+  content: "\e661";
+}
+
+.iconsort_confirm:before {
+  content: "\e662";
+}
+
+.iconsort_up:before {
+  content: "\e663";
+}
+
+.iconsort_symbol:before {
+  content: "\e664";
+}
+
+.iconpayment:before {
+  content: "\e65c";
+}
+
+.iconundone:before {
+  content: "\e659";
+}
+
+.iconcomplete:before {
+  content: "\e65a";
+}
+
+.iconsafety:before {
+  content: "\e65b";
+}
+
+.iconcheckout_line_selected:before {
+  content: "\e655";
+}
+
+.iconcheckout_line_default:before {
+  content: "\e656";
+}
+
+.iconb_upload:before {
+  content: "\e64c";
+}
+
+.iconb_discount1:before {
+  content: "\e64d";
+}
+
+.iconhelp_results_up:before {
+  content: "\e651";
+}
+
+.iconb_customization:before {
+  content: "\e652";
+}
+
+.iconb_swatches:before {
+  content: "\e653";
+}
+
+.iconb_VIP:before {
+  content: "\e654";
+}
+
+.iconpaymen_failure:before {
+  content: "\e647";
+}
+
+.iconpaymen_success_problem:before {
+  content: "\e64b";
+}
+
+.iconpayment_order_up:before {
+  content: "\e64e";
+}
+
+.iconpayment_order_down:before {
+  content: "\e64f";
+}
+
+.iconpayment_safety:before {
+  content: "\e650";
+}
+
+.iconb_discount:before {
+  content: "\e646";
+}
+
+.icondetail_share_hover:before {
+  content: "\e63f";
+}
+
+.icondetail_wishlist_hover:before {
+  content: "\e640";
+}
+
+.icondetail_wishlist:before {
+  content: "\e641";
+}
+
+.icondetail_share:before {
+  content: "\e642";
+}
+
+.icondetails_chat:before {
+  content: "\e643";
+}
+
+.icondetails_discount:before {
+  content: "\e644";
+}
+
+.icondetails_free_shipping:before {
+  content: "\e645";
+}
+
+.icondetails_up:before {
+  content: "\e648";
+}
+
+.icondetails_return:before {
+  content: "\e649";
+}
+
+.iconorder_close:before {
+  content: "\e637";
+}
+
+.iconorder_add:before {
+  content: "\e638";
+}
+
+.iconarrow_dowm_s:before {
+  content: "\e62d";
+}
+
+.iconclose:before {
+  content: "\e62e";
+}
+
+.iconarrow_dowm_l:before {
+  content: "\e62f";
+}
+
+.iconwindows_close:before {
+  content: "\e630";
+}
+
+.iconcloseeye:before {
+  content: "\e631";
+}
+
+.iconwishlist_select:before {
+  content: "\e632";
+}
+
+.iconshoppingcar:before {
+  content: "\e633";
+}
+
+.iconopeneye:before {
+  content: "\e634";
+}
+
+.iconsuccessfully:before {
+  content: "\e635";
+}
+
+.iconnotice:before {
+  content: "\e636";
+}
+
+.iconhouzz_d:before {
+  content: "\e621";
+}
+
+.iconhouzz_h:before {
+  content: "\e622";
+}
+
+.iconfacebook_d:before {
+  content: "\e623";
+}
+
+.iconfacebook_h:before {
+  content: "\e624";
+}
+
+.iconpinterest_d:before {
+  content: "\e625";
+}
+
+.iconinstagram_h:before {
+  content: "\e626";
+}
+
+.iconinstagram_d:before {
+  content: "\e627";
+}
+
+.iconyoutube_d:before {
+  content: "\e628";
+}
+
+.iconpinterest_h:before {
+  content: "\e629";
+}
+
+.icontwitter_h:before {
+  content: "\e62a";
+}
+
+.iconyoutube_h:before {
+  content: "\e62b";
+}
+
+.icontwitter_d:before {
+  content: "\e62c";
+}
+
+.icondelect:before {
+  content: "\e61f";
+}
+
+.iconarrow_down_b:before {
+  content: "\e620";
+}
+
+.iconarrow_left:before {
+  content: "\e61d";
+}
+
+.iconarrow_right:before {
+  content: "\e61e";
+}
+
+.iconnext:before {
+  content: "\e61b";
+}
+
+.iconlast:before {
+  content: "\e61c";
+}
+
+.iconfloating_top:before {
+  content: "\e619";
+}
+
+.iconfloating_customer:before {
+  content: "\e61a";
+}
+
+.iconserve_customer_default:before {
+  content: "\e611";
+}
+
+.iconserve_customer_hover:before {
+  content: "\e612";
+}
+
+.iconserve_off_defaul:before {
+  content: "\e613";
+}
+
+.iconserve_off_hover:before {
+  content: "\e614";
+}
+
+.iconserve_return_default:before {
+  content: "\e615";
+}
+
+.iconserve_return_hover:before {
+  content: "\e616";
+}
+
+.iconserve_shipping_hover:before {
+  content: "\e617";
+}
+
+.iconserve_shipping_default:before {
+  content: "\e618";
+}
+
+.iconsearch:before {
+  content: "\e60c";
+}
+
+.iconcollect:before {
+  content: "\e605";
+}
+
+.iconcart:before {
+  content: "\e606";
+}
+
+.iconcountry:before {
+  content: "\e607";
+}
+
+.iconuser:before {
+  content: "\e608";
+}
+
+.iconReturns:before {
+  content: "\e604";
+}
+
+.iconUndelivery:before {
+  content: "\e603";
+}
+
+.iconShipped:before {
+  content: "\e602";
+}
+
+.iconbianzu22:before {
+  content: "\e601";
+}
+
