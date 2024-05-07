@@ -128,6 +128,7 @@ module.exports = {
   ],
   //模式
   mode: "production", // configuration.mode should be one of these:"development" | "production" | "none"
+  devtool: "source-map", //优点：包含行/列映射.缺点：打包编译速度更慢
   // 开发服务器
   // devServer: {
   //   host: "localhost", // 启动服务器域名

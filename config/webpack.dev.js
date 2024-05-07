@@ -108,6 +108,7 @@ module.exports = {
   ],
   //模式
   mode: "development", // configuration.mode should be one of these:"development" | "production" | "none"
+  devtool: "cheap-module-source-map", //优点：打包编译速度快，只包含行映.缺点：没有列映射
   // 开发服务器
   devServer: {
     host: "localhost", // 启动服务器域名
