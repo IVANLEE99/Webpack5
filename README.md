@@ -16,3 +16,15 @@ npm i eslint@8.56.0 -D
 
 ```
 
+
+```
+ERROR in Error with 'static/imgs/7f3cc528.jpg': Expected a `string`, got `object`
+```
+
+安装指定版本
+```
+npm i image-minimizer-webpack-plugin@3.2.3 imagemin@8.0.1 -D
+npm install imagemin-gifsicle imagemin-jpegtran imagemin-optipng imagemin-svgo@10.0.1 -D
+```
+
+

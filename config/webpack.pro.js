@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const getStyleLoaders = (preProcessor) => {
   return [
     MiniCssExtractPlugin.loader,
@@ -61,7 +62,7 @@ module.exports = {
             type: "asset",
             parser: {
               dataUrlCondition: {
-                maxSize: 150 * 1024,
+                maxSize: 10 * 1024,
               },
             },
             generator: {
@@ -162,6 +163,34 @@ module.exports = {
       // 当生产模式会默认开启TerserPlugin，但是我们需要进行其他配置，就要重新写了
       new TerserPlugin({
         parallel: threads, // 开启多进程
+      }),
+      // 压缩图片
+      new ImageMinimizerPlugin({
+        minimizer: {
+          implementation: ImageMinimizerPlugin.imageminGenerate,
+          options: {
+            plugins: [
+              // ["gifsicle", { interlaced: true, buffer: 500000 * 1024 }],
+              ["jpegtran", { progressive: true }],
+              ["optipng", { optimizationLevel: 5 }],
+              [
+                "svgo",
+                {
+                  plugins: [
+                    "preset-default",
+                    "prefixIds",
+                    {
+                      name: "sortAttrs",
+                      params: {
+                        xmlnsOrder: "alphabetical",
+                      },
+                    },
+                  ],
+                },
+              ],
+            ],
+          },
+        },
       }),
     ],
   },
