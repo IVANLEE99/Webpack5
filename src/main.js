@@ -14,3 +14,13 @@ console.log(sum(1, 2, 3, 4, 5, 9));
 console.log(url);
 
 // var html = '2333'
+
+// https://webpack.docschina.org/api/hot-module-replacement/
+if (module.hot) {
+  module.hot.accept("./js/count.js", (count) => {
+    console.log(count);
+  });
+  module.hot.accept("./js/sum.js", (sum) => {
+    console.log(sum);
+  });
+}
