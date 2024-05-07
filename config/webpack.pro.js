@@ -1,8 +1,10 @@
+const os = require("os");
 const path = require("path");
 const ESLintPlugin = require("eslint-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CssMinimizerWebpackPlugin = require("css-minimizer-webpack-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 const getStyleLoaders = (preProcessor) => {
   return [
     MiniCssExtractPlugin.loader,
@@ -20,6 +22,8 @@ const getStyleLoaders = (preProcessor) => {
     preProcessor,
   ].filter(Boolean);
 };
+const threads = os.cpus().length;
+console.log("threads:", threads);
 module.exports = {
   //入口
   entry: "./src/main.js",
@@ -102,14 +106,22 @@ module.exports = {
             test: /\.m?js$/,
             // exclude: /node_modules/, // 排除node_modules代码不编译
             include: path.resolve(__dirname, "../src"), // 也可以用包含
-            use: {
-              loader: "babel-loader",
-              options: {
-                // presets: ["@babel/preset-env"],
-                cacheDirectory: true, // 开启babel编译缓存
-                cacheCompression: false, // 缓存文件不要压缩
+            use: [
+              {
+                loader: "thread-loader", // 开启多进程
+                options: {
+                  workers: threads, // 数量
+                },
               },
-            },
+              {
+                loader: "babel-loader",
+                options: {
+                  // presets: ["@babel/preset-env"],
+                  cacheDirectory: true, // 开启babel编译缓存
+                  cacheCompression: false, // 缓存文件不要压缩
+                },
+              },
+            ],
           },
         ],
       },
@@ -127,6 +139,7 @@ module.exports = {
         __dirname,
         "../node_modules/.cache/.eslintcache"
       ),
+      threads, // 开启多进程
     }),
     // 提取css成单独文件
     new MiniCssExtractPlugin({
@@ -138,8 +151,19 @@ module.exports = {
       // 新的html文件有两个特点：1. 内容和源文件一致 2. 自动引入打包生成的js等资源
       template: path.resolve(__dirname, "../public/index.html"),
     }),
-    new CssMinimizerWebpackPlugin(), // // css压缩
+    // new CssMinimizerPlugin(), // // css压缩
   ],
+  optimization: {
+    minimize: true,
+    minimizer: [
+      // css压缩也可以写到optimization.minimizer里面，效果一样的
+      new CssMinimizerPlugin(),
+      // 当生产模式会默认开启TerserPlugin，但是我们需要进行其他配置，就要重新写了
+      new TerserPlugin({
+        parallel: threads, // 开启多进程
+      }),
+    ],
+  },
   //模式
   mode: "production", // configuration.mode should be one of these:"development" | "production" | "none"
   devtool: "source-map", //优点：包含行/列映射.缺点：打包编译速度更慢

@@ -1,6 +1,28 @@
+const os = require("os");
 const path = require("path");
 const ESLintPlugin = require("eslint-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
+// const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const threads = os.cpus().length;
+console.log("threads:", threads);
+const getStyleLoaders = (preProcessor) => {
+  return [
+    "style-loader",
+    "css-loader",
+    {
+      loader: "postcss-loader",
+      options: {
+        postcssOptions: {
+          plugins: [
+            "postcss-preset-env", // 能解决大多数样式兼容性问题
+          ],
+        },
+      },
+    },
+    preProcessor,
+  ].filter(Boolean);
+};
 module.exports = {
   //入口
   entry: "./src/main.js",
@@ -19,24 +41,19 @@ module.exports = {
           {
             test: /\.css$/,
             //use 数组里面的loader 执行顺序是从右到左，从后面往前面执行
-            use: ["style-loader", "css-loader"],
+            use: getStyleLoaders(),
           },
           {
             test: /\.less$/i,
-            use: [
-              // compiles Less to CSS
-              "style-loader",
-              "css-loader",
-              "less-loader",
-            ],
+            use: getStyleLoaders("less-loader"),
           },
           {
             test: /\.s[ac]ss$/,
-            use: ["style-loader", "css-loader", "sass-loader"],
+            use: getStyleLoaders("sass-loader"),
           },
           {
             test: /\.styl$/,
-            use: ["style-loader", "css-loader", "stylus-loader"],
+            use: getStyleLoaders("stylus-loader"),
           },
           {
             test: /\.(png|jpe?g|gif|webp|svg)/,
@@ -88,14 +105,22 @@ module.exports = {
             test: /\.m?js$/,
             // exclude: /(node_modules)/,// 排除node_modules代码不编译
             include: path.resolve(__dirname, "../src"), // 也可以用包含
-            use: {
-              loader: "babel-loader",
-              options: {
-                // presets: ["@babel/preset-env"],
-                cacheDirectory: true, // 开启babel编译缓存
-                cacheCompression: false, // 缓存文件不要压缩
+            use: [
+              {
+                loader: "thread-loader", // 开启多进程
+                options: {
+                  workers: threads, // 数量
+                },
               },
-            },
+              {
+                loader: "babel-loader",
+                options: {
+                  // presets: ["@babel/preset-env"],
+                  cacheDirectory: true, // 开启babel编译缓存
+                  cacheCompression: false, // 缓存文件不要压缩
+                },
+              },
+            ],
           },
         ],
       },
@@ -113,6 +138,7 @@ module.exports = {
         __dirname,
         "../node_modules/.cache/.eslintcache"
       ),
+      threads, // 开启多进程
     }),
     new HtmlWebpackPlugin({
       // 以 public/index.html 为模板创建文件
