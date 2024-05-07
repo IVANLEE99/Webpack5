@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/IVANLEE99/Webpack5#readme",
   "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.24.3",
     "css-loader": "^7.1.1",
     "css-minimizer-webpack-plugin": "^6.0.0",
     "eslint": "^8.56.0",
