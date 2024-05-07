@@ -100,7 +100,8 @@ module.exports = {
           },
           {
             test: /\.m?js$/,
-            exclude: /(node_modules)/,
+            // exclude: /node_modules/, // 排除node_modules代码不编译
+            include: path.resolve(__dirname, "../src"), // 也可以用包含
             use: {
               loader: "babel-loader",
               //   options: {
@@ -117,6 +118,7 @@ module.exports = {
     new ESLintPlugin({
       // 指定文件根目录，类型为字符串。
       context: path.resolve(__dirname, "../src"),
+      exclude: "node_modules", // 默认值
     }),
     // 提取css成单独文件
     new MiniCssExtractPlugin({
