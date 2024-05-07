@@ -8,10 +8,12 @@ import "./stylus/index.styl";
 import "./iconfont/iconfont.css";
 import "./medea/sgs002.mp4";
 import url from "./medea/xkfy.mp3";
+import { sub } from "./js/math";
 
 console.log(count(2, 1));
 console.log(sum(1, 2, 3, 4, 5, 9));
 console.log(url);
+console.log(sub(4, 5));
 
 // var html = '2333'
 
