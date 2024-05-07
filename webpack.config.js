@@ -68,6 +68,18 @@ module.exports = {
           filename: "static/fonts/[hash:8][ext][query]",
         },
       },
+      {
+        test: /\.(mp3|mp4)/,
+        type: "asset/resource",
+        generator: {
+          // 将图片文件输出到 static/fonts 目录中
+          // 将图片文件命名 [hash:8][ext][query]
+          // [hash:8]: hash值取8位
+          // [ext]: 使用之前的文件扩展名
+          // [query]: 添加之前的query参数
+          filename: "static/medea/[hash:8][ext][query]",
+        },
+      },
     ],
   },
   //插件
