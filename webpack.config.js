@@ -108,4 +108,10 @@ module.exports = {
   ],
   //模式
   mode: "development", // configuration.mode should be one of these:"development" | "production" | "none"
+  // 开发服务器
+  devServer: {
+    host: "localhost", // 启动服务器域名
+    port: "8002", // 启动服务器端口号
+    open: true, // 是否自动打开浏览器
+  },
 };
