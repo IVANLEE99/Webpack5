@@ -1,6 +1,7 @@
 const path = require("path");
 const ESLintPlugin = require("eslint-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
   //入口
   entry: "./src/main.js",
@@ -17,24 +18,24 @@ module.exports = {
       {
         test: /\.css$/,
         //use 数组里面的loader 执行顺序是从右到左，从后面往前面执行
-        use: ["style-loader", "css-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
         test: /\.less$/i,
         use: [
           // compiles Less to CSS
-          "style-loader",
+          MiniCssExtractPlugin.loader,
           "css-loader",
           "less-loader",
         ],
       },
       {
         test: /\.s[ac]ss$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {
         test: /\.styl$/,
-        use: ["style-loader", "css-loader", "stylus-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader", "stylus-loader"],
       },
       {
         test: /\.(png|jpe?g|gif|webp|svg)/,
@@ -99,6 +100,11 @@ module.exports = {
     new ESLintPlugin({
       // 指定文件根目录，类型为字符串。
       context: path.resolve(__dirname, "../src"),
+    }),
+    // 提取css成单独文件
+    new MiniCssExtractPlugin({
+      // 定义输出文件名和目录
+      filename: "static/css/main.css",
     }),
     new HtmlWebpackPlugin({
       // 以 public/index.html 为模板创建文件
