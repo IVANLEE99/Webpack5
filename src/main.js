@@ -8,12 +8,23 @@ import "./stylus/index.styl";
 import "./iconfont/iconfont.css";
 import "./medea/sgs002.mp4";
 import url from "./medea/xkfy.mp3";
-import { sub } from "./js/math";
+// import { sub } from "./js/math";
 
 console.log(count(2, 1));
 console.log(sum(1, 2, 3, 4, 5, 9));
 console.log(url);
-console.log(sub(4, 5));
+// console.log(sub(4, 5));
+
+document.getElementById("btn").onclick = function (e) {
+  import("./js/math")
+    .then(({ sub }) => {
+      console.log(sub(1000, 9));
+      alert(sub(1000, 9));
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+};
 
 // var html = '2333'
 
