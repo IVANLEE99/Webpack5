@@ -28,3 +28,24 @@ npm install imagemin-gifsicle imagemin-jpegtran imagemin-optipng imagemin-svgo@1
 ```
 
 
+
+## 提交代码校验
+
+[husky 官方文档](https://typicode.github.io/husky/#/)
+
+
+.husky/pre-commit
+
+pre-commit : 用于检查即将提交的快照，git commit 触发（可通过 ```--no-verify``` 绕过）。
+
+
+提示
+```
+hint: The '.husky/pre-commit' hook was ignored because it's not set as executable.
+```
+
+解决方案
+
+```chmod ug+x .husky/*```
+
+
