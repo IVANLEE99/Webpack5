@@ -16,7 +16,7 @@ console.log(url);
 // console.log(sub(4, 5));
 
 document.getElementById("btn").onclick = function (e) {
-  import("./js/math")
+  import(/* webpackChunkName: "math" */ "./js/math")
     .then(({ sub }) => {
       console.log(sub(1000, 9));
       alert(sub(1000, 9));
