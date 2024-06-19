@@ -1,3 +1,6 @@
+// import "core-js";
+// import "core-js/es/promise";
+
 import count from "./js/count";
 import sum from "./js/sum";
 import "./css/index.css";
@@ -37,3 +40,11 @@ if (module.hot) {
     console.log(sum);
   });
 }
+
+// 添加promise代码
+const promise = Promise.resolve();
+promise.then(() => {
+  console.log("hello promise");
+});
+
+console.log([1, 2, 3, 4, 5, 6, 7, 8, 9, 10].includes(10));
