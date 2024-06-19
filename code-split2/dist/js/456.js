@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcode_split2=self.webpackChunkcode_split2||[]).push([[456],{456:function(n,u,e){function t(n,u){return n+u}e.r(u),e.d(u,{sum:function(){return t}})}}]);
