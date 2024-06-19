@@ -6,6 +6,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
+const PreloadWebpackPlugin = require("@vue/preload-webpack-plugin");
+
 const getStyleLoaders = (preProcessor) => {
   return [
     MiniCssExtractPlugin.loader,
@@ -158,6 +160,11 @@ module.exports = {
       template: path.resolve(__dirname, "../public/index.html"),
     }),
     // new CssMinimizerPlugin(), // // css压缩
+    new PreloadWebpackPlugin({
+      // rel: "preload", // preload兼容性更好
+      // as: "script",
+      rel: "prefetch", // prefetch兼容性更差
+    }),
   ],
   optimization: {
     minimize: true,

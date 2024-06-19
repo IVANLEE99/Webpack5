@@ -16,5 +16,5 @@ features:
     details: 从基础配置，到高级优化，到项目配置，最后到原理分析
   - title: 📦 最全面的案例
     details: 不同角度实现loader、plugin
-footer: MIT Licensed | Copyright © 2022-present 尚硅谷
+footer: MIT Licensed | Copyright © 2022-present Youngs羊示
 ---

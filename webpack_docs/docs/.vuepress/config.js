@@ -2,10 +2,11 @@ const { copyCode } = require("vuepress-plugin-copy-code2");
 
 module.exports = {
   // 站点配置
-  base: "/webpack5-docs/",
+  // base: "/webpack5-docs/",
+  base: "/webpack_docs/dist/",
   lang: "zh-CN",
   head: [["link", { rel: "icon", href: "/imgs/favicon.ico" }]],
-  title: "尚硅谷 Web 前端之 Webpack5 教程",
+  title: "Youngs羊示 Web 前端之 Webpack5 教程",
   description: "Webpack5从小白到大神",
   // 主题和它的配置
   theme: "@vuepress/theme-default",
@@ -38,7 +39,13 @@ module.exports = {
       "/intro/": [
         {
           text: "课程介绍",
-          children: ["/intro/README.md", "/intro/pre.md", "/intro/group.md", "/intro/learn.md", "/intro/asset.md"],
+          children: [
+            "/intro/README.md",
+            "/intro/pre.md",
+            "/intro/group.md",
+            "/intro/learn.md",
+            "/intro/asset.md",
+          ],
         },
       ],
       "/base/": [
@@ -68,19 +75,36 @@ module.exports = {
       "/senior/": [
         {
           text: "高级优化",
-          children: ["/senior/README.md", "/senior/enhanceExperience.md", "/senior/liftingSpeed.md", "/senior/reduceVolume.md", "/senior/optimizePerformance.md", "/senior/summary.md"],
+          children: [
+            "/senior/README.md",
+            "/senior/enhanceExperience.md",
+            "/senior/liftingSpeed.md",
+            "/senior/reduceVolume.md",
+            "/senior/optimizePerformance.md",
+            "/senior/summary.md",
+          ],
         },
       ],
       "/project/": [
         {
           text: "项目配置",
-          children: ["/project/README.md", "/project/react-cli.md", "/project/vue-cli.md", "/project/summary.md"],
+          children: [
+            "/project/README.md",
+            "/project/react-cli.md",
+            "/project/vue-cli.md",
+            "/project/summary.md",
+          ],
         },
       ],
       "/origin/": [
         {
           text: "原理分析",
-          children: ["/origin/README.md", "/origin/loader.md", "/origin/plugin.md", "/origin/summary.md"],
+          children: [
+            "/origin/README.md",
+            "/origin/loader.md",
+            "/origin/plugin.md",
+            "/origin/summary.md",
+          ],
         },
       ],
     },
