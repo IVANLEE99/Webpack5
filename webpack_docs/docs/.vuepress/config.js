@@ -3,7 +3,7 @@ const { copyCode } = require("vuepress-plugin-copy-code2");
 module.exports = {
   // 站点配置
   // base: "/webpack5-docs/",
-  base: "/webpack_docs/dist/",
+  base: "/Webpack5/webpack_docs/dist/",
   lang: "zh-CN",
   head: [["link", { rel: "icon", href: "/imgs/favicon.ico" }]],
   title: "Youngs羊示 Web 前端之 Webpack5 教程",
