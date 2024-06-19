@@ -1,0 +1,1 @@
+include: [webpack_docs/docs/.vuepress]
