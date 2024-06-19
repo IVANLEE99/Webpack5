@@ -48,3 +48,16 @@ promise.then(() => {
 });
 
 console.log([1, 2, 3, 4, 5, 6, 7, 8, 9, 10].includes(10));
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("/service-worker.js")
+      .then((registration) => {
+        console.log("SW registered: ", registration);
+      })
+      .catch((registrationError) => {
+        console.log("SW registration failed: ", registrationError);
+      });
+  });
+}

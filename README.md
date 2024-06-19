@@ -53,4 +53,13 @@ hint: The '.husky/pre-commit' hook was ignored because it's not set as executabl
 [Webpack5学习文档](https://ivanlee99.github.io/Webpack5/webpack_docs/dist/)
 
 
+```
+ERROR in sources.at is not a function
+```
+
+```
+npm i workbox-webpack-plugin@6.5.3 -D
++ workbox-webpack-plugin@6.5.3
+```
+
 
