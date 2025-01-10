@@ -1,15 +1,16 @@
-// webpack.config.js
 const path = require("path");
 const ESLintWebpackPlugin = require("eslint-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const TerserWebpackPlugin = require("terser-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
+const TerserWebpackPlugin = require("terser-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 const { VueLoaderPlugin } = require("vue-loader");
 const { DefinePlugin } = require("webpack");
-const CopyPlugin = require("copy-webpack-plugin");
-
+const AutoImport = require("unplugin-auto-import/webpack");
+const Components = require("unplugin-vue-components/webpack");
+const { ElementPlusResolver } = require("unplugin-vue-components/resolvers");
 // 需要通过 cross-env 定义环境变量
 const isProduction = process.env.NODE_ENV === "production";
 
@@ -25,7 +26,16 @@ const getStyleLoaders = (preProcessor) => {
         },
       },
     },
-    preProcessor,
+    preProcessor && {
+      loader: preProcessor,
+      options:
+        preProcessor === "sass-loader"
+          ? {
+              // 自定义主题：自动引入我们定义的scss文件
+              additionalData: `@use "@/styles/element/index.scss" as *;`,
+            }
+          : {},
+    },
   ].filter(Boolean);
 };
 
@@ -45,9 +55,7 @@ module.exports = {
   module: {
     rules: [
       {
-        // 用来匹配 .css 结尾的文件
         test: /\.css$/,
-        // use 数组里面 Loader 执行顺序是从右到左
         use: getStyleLoaders(),
       },
       {
@@ -67,7 +75,7 @@ module.exports = {
         type: "asset",
         parser: {
           dataUrlCondition: {
-            maxSize: 10 * 1024, // 小于10kb的图片会被base64处理
+            maxSize: 10 * 1024,
           },
         },
       },
@@ -140,6 +148,17 @@ module.exports = {
       __VUE_OPTIONS_API__: "true",
       __VUE_PROD_DEVTOOLS__: "false",
     }),
+    // 按需加载element-plus组件样式
+    AutoImport.default({
+      resolvers: [ElementPlusResolver()],
+    }),
+    Components.default({
+      resolvers: [
+        ElementPlusResolver({
+          importStyle: "sass", // 自定义主题
+        }),
+      ],
+    }),
   ].filter(Boolean),
   optimization: {
     minimize: isProduction,
@@ -177,6 +196,37 @@ module.exports = {
     ],
     splitChunks: {
       chunks: "all",
+      cacheGroups: {
+        // layouts通常是admin项目的主体布局组件，所有路由组件都要使用的
+        // 可以单独打包，从而复用
+        // 如果项目中没有，请删除
+        layouts: {
+          name: "layouts",
+          test: path.resolve(__dirname, "../src/layouts"),
+          priority: 40,
+        },
+        // 如果项目中使用element-plus，此时将所有node_modules打包在一起，那么打包输出文件会比较大。
+        // 所以我们将node_modules中比较大的模块单独打包，从而并行加载速度更好
+        // 如果项目中没有，请删除
+        elementUI: {
+          name: "chunk-elementPlus",
+          test: /[\\/]node_modules[\\/]_?element-plus(.*)/,
+          priority: 30,
+        },
+        // 将vue相关的库单独打包，减少node_modules的chunk体积。
+        vue: {
+          name: "vue",
+          test: /[\\/]node_modules[\\/]vue(.*)[\\/]/,
+          chunks: "initial",
+          priority: 20,
+        },
+        libs: {
+          name: "chunk-libs",
+          test: /[\\/]node_modules[\\/]/,
+          priority: 10, // 权重最低，优先考虑前面内容
+          chunks: "initial",
+        },
+      },
     },
     runtimeChunk: {
       name: (entrypoint) => `runtime~${entrypoint.name}`,
@@ -184,6 +234,10 @@ module.exports = {
   },
   resolve: {
     extensions: [".vue", ".js", ".json"],
+    alias: {
+      // 路径别名
+      "@": path.resolve(__dirname, "../src"),
+    },
   },
   devServer: {
     open: true,
@@ -195,4 +249,5 @@ module.exports = {
   },
   mode: isProduction ? "production" : "development",
   devtool: isProduction ? "source-map" : "cheap-module-source-map",
+  performance: false,
 };

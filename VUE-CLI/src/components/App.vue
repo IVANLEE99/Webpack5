@@ -1,12 +1,17 @@
 <!--  -->
 <template>
-  <div class="App">app</div>
+  <div class="App">
+    app
+
+    <el-button type="primary">我是 ElButton</el-button>
+  </div>
 </template>
 <script>
+import { ElButton } from "element-plus";
 export default {
   name: "App",
   //import引入的组件需要注入到对象中才能使用
-  components: {},
+  components: { ElButton },
   //prop属性
   props: {
     props: {
